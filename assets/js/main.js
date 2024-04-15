@@ -306,24 +306,7 @@ ScrollTrigger.create({
 });
 
 // 반복 모션 데이터화
-
 // 텍스트 모션
-// 텍스트 잘림 이슈로 인해 변경 > 리펙토링으로 노션에 적기
-// $('[data-motion="text"]').each(function (index, item) {
-//   gsap.from($(this).find(".word"), {
-//     scrollTrigger: {
-//       trigger: item,
-//       start: "0% 90%",
-//       end: "100% 0%",
-//       markers: true,
-//       toggleActions: "play none none reset",
-//     },
-//     yPercent: 100,
-//     stagger: 0.1,
-//     duration: 1,
-//   });
-// });
-
 const text = new SplitType('[data-motion="text"]', {
   types: "line, words, chars",
 });
@@ -341,16 +324,6 @@ $('[data-motion="text"]').each(function (index, item) {
     { yPercent: 100, stagger: 0.02, duration: 1 },
     "a"
   );
-
-  // ScrollTrigger.create({
-  //   animation: textTl,
-  //   trigger: item,
-  //   start: "0% 90%",
-  //   end: "100% 0%",
-  //   // markers: true,
-  //   ease: "none",
-  //   toggleActions: toggleAction,
-  // });
 
   const scrollTriggerOptions = {
     animation: textTl,
