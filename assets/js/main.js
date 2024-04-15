@@ -26,6 +26,21 @@ const mainTit = new SplitType(".sc-main .big-tit", {
   types: "line, words",
 });
 
+
+// 인트로
+const introTl = gsap.timeline({
+  onComplete: function () {
+    // 메인
+    mainTl.play();
+  },
+});
+introTl
+  .from(".sc-intro .big-logo",
+  { xPercent: -30, opacity: 0, duration: 2 },"a")
+  .from(".sc-intro .stamp", { opacity: 0, duration: 2 }, "a")
+  .to(".sc-intro", { clipPath: "inset(0 0 0 100%)",}
+);
+
 //  메인
 function mainLineAni(timeline) {
   timeline
@@ -69,20 +84,6 @@ const mainScrollTl = gsap.timeline({
 });
 mainLineAni(mainScrollTl);
 
-const introTl = gsap.timeline({
-  onComplete: function () {
-    // 메인
-    mainTl.play();
-  },
-});
-introTl
-  .from(".sc-intro .big-logo",
-  { xPercent: -30, opacity: 0, duration: 2 },"a")
-  .from(".sc-intro .stamp", { opacity: 0, duration: 2 }, "a")
-  .to(".sc-intro", { clipPath: "inset(0 0 0 100%)",}
-);
-
-
 
 
 // 비지니스 섹션 배경
@@ -103,57 +104,31 @@ businessTl
 
 
 
-// 스토리 섹션
-
 // 반응형  토글액션 공통 변수
 var viewport = window.matchMedia("(min-width: 1025px)").matches;
 var toggleAction = viewport ? "play reset play reset" : "restart pause resume pause";
 
+
+// 스토리 섹션
 const storyTl = gsap.timeline();
 storyTl
   .from(".sc-story h2 .tit .line", { clipPath: "inset(-1em 0 -0.15em)" }, "a")
-  .from(
-    ".sc-story h2 .tit .word",
-    { yPercent: 100, stagger: 0.02, duration: 1 },
-    "a"
-  )
+  .from(".sc-story h2 .tit .word", { yPercent: 100, stagger: 0.02, duration: 1 }, "a")
   .from(".sc-story h2 .ico-arrow", { scale: 0, duration: 1 }, "a")
-  // 주황색 선 애니메이션
-  .fromTo(
-    ".sc-story h2 .surround",
-    { maskImage: "conic-gradient(from -24deg, black 0deg, transparent 0deg)" },
-    {
-      maskImage:
-        "conic-gradient(from -24deg, black 360deg, transparent 360deg)",
-      duration: 3,
-    }
-);
-  
-const scrollTriggerOptions = {
+  .fromTo(".sc-story h2 .surround", 
+    { maskImage: "conic-gradient(from -24deg, black 0deg, transparent 0deg)" }, 
+    { maskImage: "conic-gradient(from -24deg, black 360deg, transparent 360deg)", duration: 3 }
+  )
+;
+
+ScrollTrigger.create({
   animation: storyTl,
   trigger: ".sc-story h2",
   start: "0% 90%",
   end: "100% 0%",
-  // markers: true,
   ease: "none",
   toggleActions: toggleAction,
-};
-
-ScrollTrigger.create(scrollTriggerOptions);
-
-// 반응형 변수로 리펙토링
-// if (window.matchMedia("(min-width: 431px)").matches) {
-//   ScrollTrigger.create({
-//     ...scrollTriggerOptions,
-//     toggleActions: "play reset play reset",
-//   });
-// } else {
-//   ScrollTrigger.create({
-//     ...scrollTriggerOptions,
-//     toggleActions: "restart pause resume pause",
-//   });
-// }
-
+});
 
 // 이미지 컬러 변경
 const storyImgTl = gsap.timeline({
@@ -171,6 +146,12 @@ storyImgTl.fromTo(
   { clipPath: "inset(0 0 0%)" }
 );
 
+
+
+
+
+
+
 // 인디펜던트 섹션 스크롤 배경이미지
 const indepanBgTl = gsap.timeline({
   scrollTrigger: {
@@ -184,38 +165,38 @@ const indepanBgTl = gsap.timeline({
 });
 indepanBgTl.to(".sc-independent .inner .box-3 .wrap .bg", { opacity: 0.4 });
 
-// 인디펜던트 섹션 스크롤 스티키
+// 인디펜던트 섹션 스크롤 고정
 const indepanFixTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-independent .box-3",
     start: "0% 0%",
     end: "400% 0%",
     scrub: 0,
-    pin: ".sc-independent .sticky",
+    pin: ".sc-independent .fixed",
     // markers: true,
   },
   ease: "none",
 });
-const indepBox3 = ".sc-independent .inner .box-3";
+const box3Wrap = ".sc-independent .box-3 .wrap";
+const box3Wrap2 = ".sc-independent .box-3 .wrap2";
 indepanFixTl
-  .to(`${indepBox3} .wrap .big-tit`, { opacity: 0 }, "a")
-  .from(`${indepBox3} .wrap .left`, { yPercent: 100 }, "a")
-  .from(`${indepBox3} .wrap .right`, { yPercent: -100, display: "none" }, "a")
+  .to(`${box3Wrap} .big-tit`, { opacity: 0 }, "a")
+  .from(`${box3Wrap} .left`, { yPercent: 100 }, "a")
+  .from(`${box3Wrap} .right`, { yPercent: -100, display: "none" }, "a")
 
-  .to(`${indepBox3} .wrap2 .big-tit`, { opacity: 0.5 }, "b")
-  .to(`${indepBox3} .wrap2 .bg`, { opacity: 0.4 }, "b")
-  .to(`${indepBox3} .wrap .bg`, { opacity: 0 }, "b")
-  .to(`${indepBox3} .wrap .right`, { xPercent: 100 }, "b")
-  .to(`${indepBox3} .wrap .left`, { clipPath: "inset(0 100% 0 0)" }, "b")
+  .to(`${box3Wrap2} .big-tit`, { opacity: 0.5 }, "b")
+  .to(`${box3Wrap2} .bg`, { opacity: 0.4 }, "b")
+  .to(`${box3Wrap} .bg`, { opacity: 0 }, "b")
+  .to(`${box3Wrap} .right`, { xPercent: 100 }, "b")
+  .to(`${box3Wrap} .left`, { clipPath: "inset(0 100% 0 0)" }, "b")
 
-  .to(`${indepBox3} .wrap .right`, { display: "none" }, "c")
-  .from(`${indepBox3} .wrap2 .left`, { yPercent: 100 }, "c")
-  .from(`${indepBox3} .wrap2 .right`, { yPercent: -100, display: "none" }, "c")
-  .from(`${indepBox3} .wrap2 .left img`, { scale: 1.2 }, "c")
-  .from(`${indepBox3} .wrap2 .right img`, { scale: 1.2 }, "c")
-  .to(`${indepBox3} .wrap2 .big-tit`, { opacity: 0 }, "c")
-  .to(`${indepBox3} .wrap2 .bg`, { opacity: 0 }, "c"
-  );
+  .to(`${box3Wrap} .right`, { display: "none" }, "c")
+  .from(`${box3Wrap2} .left`, { yPercent: 100 }, "c")
+  .from(`${box3Wrap2} .right`, { yPercent: -100, display: "none" }, "c")
+  .from(`${box3Wrap2} .left img`, { scale: 1.2 }, "c")
+  .from(`${box3Wrap2} .right img`, { scale: 1.2 }, "c")
+  .to(`${box3Wrap2} .big-tit`, { opacity: 0 }, "c")
+  .to(`${box3Wrap2} .bg`, { opacity: 0 }, "c");
 
 // 넥스트 섹션
 gsap.from(".sc-next .under-tit", {
@@ -361,6 +342,16 @@ $('[data-motion="text"]').each(function (index, item) {
     "a"
   );
 
+  // ScrollTrigger.create({
+  //   animation: textTl,
+  //   trigger: item,
+  //   start: "0% 90%",
+  //   end: "100% 0%",
+  //   // markers: true,
+  //   ease: "none",
+  //   toggleActions: toggleAction,
+  // });
+
   const scrollTriggerOptions = {
     animation: textTl,
     trigger: item,
@@ -486,7 +477,7 @@ $("[data-motion=lineOpp]").each(function (index, item) {
     trigger: item,
     start: "0% 90%",
     end: "100% 0%",
-    markers: true,
+    // markers: true,
     ease: "none",
     toggleActions: toggleAction,
   };
