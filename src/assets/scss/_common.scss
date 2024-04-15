@@ -1,0 +1,388 @@
+.wrapper {
+  position: relative;
+}
+// 라인
+[class*="line-"] {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 88.89px;
+  width: 1px;
+  background-color: $white;
+  margin: 0 auto;
+  &::before {
+    position: absolute;
+    margin: 0 auto;
+    width: 13px;
+    height: 1px;
+    background-color: $white;
+    content: "";
+  }
+}
+
+.line-top {
+  &::before {
+    bottom: 0;
+  }
+}
+.line-bottom {
+  &::before {
+    top: 0;
+  }
+}
+
+// 텍스트 스타일
+.huge-tit {
+  font-size: 10vw;
+  line-height: 1.04;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 11.12vw;
+  }
+}
+
+.big-tit {
+  font-size: 7.5vw;
+  line-height: 1.02;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 11.12vw;
+  }
+}
+
+.large-tit {
+  font-size: 6.88vw;
+  line-height: 0.94;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 13vw;
+  }
+}
+
+.middle-tit {
+  font-size: 2.85vw;
+  line-height: 1.1;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 6.76vw;
+  }
+}
+
+.small-tit {
+  font-size: 0.99vw;
+  font-family: "Rift Soft", sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.125vw;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 3.5vw;
+    letter-spacing: 0.1em;
+  }
+}
+
+.sub-tit {
+  font-size: 1.25vw;
+  font-family: "Rift Soft", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $orange;
+  margin-bottom: 1vw;
+  @include mobile {
+    font-size: 4vw;
+  }
+}
+
+// 로고 스템프
+.stamp {
+  position: relative;
+  border-radius: 100%;
+  background-color: $orange;
+  svg {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: calc(70% - 1.25vw);
+    path {
+      fill: $black;
+    }
+  }
+  .txt {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    color: $black;
+    font-size: 0.9332vw;
+    @include mobile {
+      font-size: 3.14vw;
+    }
+    font-family: "Rift Soft", sans-serif;
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: uppercase;
+    &::after,
+    &::before {
+      position: absolute;
+      top: 50%;
+      display: block;
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: $black;
+    }
+    &::after {
+      right: 10%;
+    }
+    &::before {
+      left: 10%;
+    }
+    .top,
+    .bottom {
+      position: absolute;
+      inset: 0;
+      line-height: 2.2em;
+      span {
+        position: absolute;
+        left: 50%;
+      }
+    }
+  }
+  // 스템프 회전
+  &.ani-rotation {
+    .txt {
+      animation: rotation 40s linear infinite;
+    }
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// 점 디자인
+.deco-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+}
+
+.pseudo-dot {
+  &::after,
+  &::before {
+    position: absolute;
+    top: 50%;
+    display: block;
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: $black;
+  }
+  &::after {
+    right: 10%;
+  }
+  &::before {
+    left: 10%;
+  }
+}
+
+// 색상
+[data-theme="dark"] {
+  background-color: $black;
+  color: $white;
+}
+[data-theme="orange"] {
+  background-color: $orange;
+  color: $white;
+  .tit {
+    font-size: 5vw;
+  }
+}
+[data-theme="white"] {
+  position: relative;
+  padding: 12.51vw 0;
+  @include mobile {
+    padding: 24.2vw 0;
+  }
+  .inner {
+    width: 80.66vw;
+    max-width: 100%;
+    margin: 0 auto;
+    @include mobile {
+      width: calc(100% - 32px);
+    }
+  }
+  h2 {
+    width: fit-content;
+    max-width: 68.78vw;
+    @include mobile {
+      max-width: 100%;
+    }
+    a {
+      position: relative;
+      @include tabletPc {
+        &:hover {
+          transition: 0.3s;
+          .position {
+            .ico-arrow {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+    .tit {
+      font-size: 5vw;
+      line-height: 0.94;
+      @include mobile {
+        font-size: 9.18vw;
+      }
+    }
+  }
+}
+
+[data-theme="orangeBox"] {
+  position: relative;
+  z-index: 2;
+  padding: 17.51vw 10vw;
+  max-width: 74.72vw;
+  background-color: $orange;
+  color: $white;
+  @include tabletMb {
+    padding: 16rem 3rem 13rem;
+    max-width: 60rem;
+  }
+  @include mobile {
+    max-width: 96.14vw;
+  }
+  &::before {
+    position: absolute;
+    top: 1.876vw;
+    left: 1.876vw;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: $white;
+    content: "";
+  }
+  .sub-tit {
+    color: $white;
+  }
+  .tit {
+    font-size: 4.7vw;
+    @include mobile {
+      font-size: 9.1787vw;
+    }
+  }
+}
+
+.ico-arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.25vw;
+  height: 6.25vw;
+  border-radius: 100%;
+  border: 2px solid $orange;
+  margin-left: 1.25vw;
+  @include mobile {
+    width: 12.6vw;
+    height: 12.6vw;
+  }
+  &::after,
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: $orange;
+    @include mobile {
+      width: 2px;
+      height: 2px;
+    }
+  }
+  &::after {
+    right: 10%;
+  }
+  &::before {
+    left: 10%;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+    path {
+      fill: $orange;
+    }
+  }
+}
+
+.deco {
+  .small-tit {
+    margin-top: 0.6253vw;
+    @include mobile {
+      margin-top: 2.7vw;
+    }
+  }
+}
+
+[data-motion="text"] {
+  .line {
+    display: inline-block;
+    overflow: hidden;
+    clip-path: none;
+    .word {
+      display: inline-block;
+      pointer-events: auto;
+    }
+  }
+}
+
+//br태그
+.pc {
+  @include tabletMb {
+    display: none;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+  padding: 0 2.2vw;
+  color: $white;
+  background-color: $orange;
+  opacity: 0;
+  &::after,
+  &::before {
+    position: absolute;
+    top: 50%;
+    display: block;
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: $white;
+  }
+  &::after {
+    right: 10%;
+  }
+  &::before {
+    left: 10%;
+  }
+}

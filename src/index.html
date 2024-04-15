@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+  <script src="./assets/js/split.min.js"></script>
+  <script defer src="./assets/js/main.js"></script>
+  <script>history.scrollRestoration = "auto"</script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="logo">
+        <a href="#">
+          <div class="stamp">
+            <div class="txt">
+              <span class="top">
+                <span>M</span>
+                <span>a</span>
+                <span>i</span>
+                <span>s</span>
+                <span>o</span>
+                <span>n</span>
+                <span>&nbsp;</span>
+                <span>B</span>
+                <span>o</span>
+                <span>i</span>
+                <span>n</span>
+                <span>a</span>
+                <span>u</span>
+                <span>d</span>
+              </span>
+              <span class="bottom">
+                <span>M</span>
+                <span>a</span>
+                <span>i</span>
+                <span>s</span>
+                <span>o</span>
+                <span>n</span>
+                <span>&nbsp;</span>
+                <span>B</span>
+                <span>o</span>
+                <span>i</span>
+                <span>n</span>
+                <span>a</span>
+                <span>u</span>
+                <span>d</span>
+              </span>
+            </div>
+            <svg fill="none" height="131" viewBox="0 0 130 131" width="130" xmlns="http://www.w3.org/2000/svg"
+              class="stamp-illu">
+              <path
+                d="m77.6541 47.6422c5.1288-3.1093 8.4556-8.112 8.4556-13.7503 0-9.411-9.2734-17.0669-20.6816-17.0669h-2.8555v14.4551c-10.119 1.1055-17.9508 8.2502-17.9508 16.9011 0 5.6383 3.3268 10.6548 8.4556 13.7503-9.121 3.828-15.4142 11.7603-15.4142 20.9226 0 11.9814 10.8676 22.0139 24.9233 23.2029v11.539h5.7249v-25.8284c13.9725-1.2437 24.7707-11.2628 24.7707-23.2166 0-9.1484-6.2793-17.0946-15.4141-20.9226zm-15.0815 38.3074c-1.899-.2211-4.1862-.6357-6.4595-1.3681v5.9562c2.301.608 4.5466.9535 6.4595 1.147v8.6513c-10.8536-1.1059-19.1984-8.5822-19.1984-17.4681s8.3863-16.376 19.1984-17.4815v20.5771zm0-26.6023c-6.9446-.9812-12.226-5.5969-12.226-11.1661s5.2814-10.1849 12.226-11.1661zm5.7249-36.6214c6.8754 1.0226 12.0874 5.6383 12.0874 11.1522 0 5.514-5.212 10.1296-12.0874 11.1523zm0 63.3067v-34.9631c10.7428 1.1608 19.0459 8.5542 19.0459 17.4815s-8.2615 16.3207-19.0459 17.4816z"
+                fill="#ff4713"></path>
+            </svg>
+          </div>
+        </a>
+      </h1>
+      <nav class="gnb">
+        <div class="inner">
+          <span class="deco-dot"></span>
+          <ul class="menu-list">
+            <li><a href="">maison boinaud</a></li>
+            <li><a href="">our vision</a></li>
+            <li><a href="">know-how</a></li>
+            <li><a href="">our brands</a></li>
+            <li><a href="">visits</a></li>
+            <li><a href="">spirit creation</a></li>
+            <li><a href="">join us</a></li>
+            <li><a href="">contact</a></li>
+          </ul>
+          <span class="deco-dot"></span>
+          <ul class="lang-list">
+            <li><a href="">en</a></li>
+            <li><a href="">fr</a></li>
+          </ul>
+          <span class="deco-dot"></span>
+          <div class="bg-mb">
+            <svg fill="none" height="1248" viewBox="0 0 691 1248" width="691" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m499.092 381.703c63.779-38.49 105.241-100.528 105.241-170.345 0-116.5486-115.485-211.358-257.443-211.358h-35.641v179.124c-125.979 13.675-223.5966 102.207-223.5966 209.316 0 69.814 41.4626 131.855 105.2406 170.345-113.6372 47.365-191.898371 145.676-191.898371 259.009 0 148.437 135.404371 272.596 310.257371 287.276v142.93h71.281v-319.846c174.037-15.347 308.462-139.488 308.462-287.442 0-113.333-78.268-211.644-191.903-259.009zm-187.845 474.395c-23.705-2.659-52.095-7.841-80.498-16.884v73.743c28.636 7.481 56.597 11.831 80.498 14.157v107.056c-135.162-13.76-238.9751-106.329-238.9751-216.379 0-111.002 104.4031-202.814 238.9751-216.507zm0-329.456c-86.521-12.081-152.315-69.375-152.315-138.202s65.79-126.166 152.315-138.246zm71.282-453.3881c85.663 12.5994 150.52 69.7331 150.52 138.1041 0 68.37-64.857 125.483-150.52 138.083zm0 783.9031v-432.893c133.725 14.309 237.178 105.923 237.178 216.448 0 109.587-102.837 202.074-237.178 216.445z"
+                fill="#fff" opacity=".1"></path>
+            </svg>
+          </div>
+          <button class="btn-close" type="button">close</button>
+        </div>
+      </nav>
+      <button class="btn-mb" type="button">
+        <span class="deco-dot"></span>
+        <span>menu</span>
+        <span class="deco-dot"></span>
+      </button>
+    </header>
+    <main class="main">
+      <section class="sc-intro">
+        <div class="inner">
+          <svg class="big-logo" fill="none" height="1248" viewBox="0 0 691 1248" width="691"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m499.092 381.703c63.779-38.49 105.241-100.528 105.241-170.345 0-116.5486-115.485-211.358-257.443-211.358h-35.641v179.124c-125.979 13.675-223.5966 102.207-223.5966 209.316 0 69.814 41.4626 131.855 105.2406 170.345-113.6372 47.365-191.898371 145.676-191.898371 259.009 0 148.437 135.404371 272.596 310.257371 287.276v142.93h71.281v-319.846c174.037-15.347 308.462-139.488 308.462-287.442 0-113.333-78.268-211.644-191.903-259.009zm-187.845 474.395c-23.705-2.659-52.095-7.841-80.498-16.884v73.743c28.636 7.481 56.597 11.831 80.498 14.157v107.056c-135.162-13.76-238.9751-106.329-238.9751-216.379 0-111.002 104.4031-202.814 238.9751-216.507zm0-329.456c-86.521-12.081-152.315-69.375-152.315-138.202s65.79-126.166 152.315-138.246zm71.282-453.3881c85.663 12.5994 150.52 69.7331 150.52 138.1041 0 68.37-64.857 125.483-150.52 138.083zm0 783.9031v-432.893c133.725 14.309 237.178 105.923 237.178 216.448 0 109.587-102.837 202.074-237.178 216.445z"
+              fill="#fff" opacity=".1"></path>
+          </svg>
+          <div class="stamp ani-rotation">
+            <div class="txt">
+              <span class="top">
+                <span>M</span>
+                <span>a</span>
+                <span>i</span>
+                <span>s</span>
+                <span>o</span>
+                <span>n</span>
+                <span>&nbsp;</span>
+                <span>B</span>
+                <span>o</span>
+                <span>i</span>
+                <span>n</span>
+                <span>a</span>
+                <span>u</span>
+                <span>d</span>
+              </span>
+              <span class="bottom">
+                <span>M</span>
+                <span>a</span>
+                <span>i</span>
+                <span>s</span>
+                <span>o</span>
+                <span>n</span>
+                <span>&nbsp;</span>
+                <span>B</span>
+                <span>o</span>
+                <span>i</span>
+                <span>n</span>
+                <span>a</span>
+                <span>u</span>
+                <span>d</span>
+              </span>
+            </div>
+            <svg fill="none" height="131" viewBox="0 0 130 131" width="130" xmlns="http://www.w3.org/2000/svg"
+              class="stamp-illu">
+              <path
+                d="m77.6541 47.6422c5.1288-3.1093 8.4556-8.112 8.4556-13.7503 0-9.411-9.2734-17.0669-20.6816-17.0669h-2.8555v14.4551c-10.119 1.1055-17.9508 8.2502-17.9508 16.9011 0 5.6383 3.3268 10.6548 8.4556 13.7503-9.121 3.828-15.4142 11.7603-15.4142 20.9226 0 11.9814 10.8676 22.0139 24.9233 23.2029v11.539h5.7249v-25.8284c13.9725-1.2437 24.7707-11.2628 24.7707-23.2166 0-9.1484-6.2793-17.0946-15.4141-20.9226zm-15.0815 38.3074c-1.899-.2211-4.1862-.6357-6.4595-1.3681v5.9562c2.301.608 4.5466.9535 6.4595 1.147v8.6513c-10.8536-1.1059-19.1984-8.5822-19.1984-17.4681s8.3863-16.376 19.1984-17.4815v20.5771zm0-26.6023c-6.9446-.9812-12.226-5.5969-12.226-11.1661s5.2814-10.1849 12.226-11.1661zm5.7249-36.6214c6.8754 1.0226 12.0874 5.6383 12.0874 11.1522 0 5.514-5.212 10.1296-12.0874 11.1523zm0 63.3067v-34.9631c10.7428 1.1608 19.0459 8.5542 19.0459 17.4815s-8.2615 16.3207-19.0459 17.4816z"
+                fill="#ff4713"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="sc-main">
+        <div class="inner">
+          <span class="line-top"></span>
+          <div class="bg">
+            <figure class="image">
+              <img src="./assets/img/main-bg.jpg" alt>
+            </figure>
+          </div>
+          <h2 class="big-tit">
+            naturally
+            <br>
+            spirits
+          </h2>
+          <span class="line-bottom"></span>
+        </div>
+      </section>
+      <section class="sc-masters" data-theme="dark" data-motion="scale">
+        <div class="inner">
+          <div class="center">
+            <h2>
+              <div class="large-tit" data-motion="text">
+                we are
+                <br>
+                masters
+              </div>
+              <div class="large-tit" data-motion="text">
+                of
+                <br>
+                our craft
+              </div>
+            </h2>
+            <div class="video-posi">
+              <div class="video-box">
+                <video autoplay loop muted>
+                  <source src="./assets/video/video-final-9mo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <button type="button" class="btn-open">play</button>
+              <button type="button" class="btn-close small-tit">close</button>
+            </div>
+          </div>
+          <div class="bottom" data-motion="lineBox">
+            <p class="small-tit">This comprehensive approach, we proudly claim it.</p>
+            <span class="line-bottom"></span>
+          </div>
+        </div>
+      </section>
+      <section class="sc-business">
+        <div class="inner">
+          <div class="bg">
+            <figure class="img">
+              <img src="./assets/img/business-bg.jpg" alt>
+            </figure>
+          </div>
+          <div class="box-glass" data-theme="orange">
+            <p class="top-txt small-tit">our business</p>
+            <div class="middle-tit" data-motion="text">
+              FROM GRAPE TO
+              <br>
+              GLASS
+            </div>
+            <div class="stamp ani-rotation">
+              <div class="txt">
+                <span class="top">
+                  <span>F</span>
+                  <span>r</span>
+                  <span>o</span>
+                  <span>m</span>
+                  <span>&nbsp;</span>
+                  <span>g</span>
+                  <span>r</span>
+                  <span>a</span>
+                  <span>p</span>
+                  <span>e</span>
+                  <span>&nbsp;</span>
+                  <span>t</span>
+                  <span>o</span>
+                  <span>&nbsp;</span>
+                  <span>g</span>
+                  <span>l</span>
+                  <span>a</span>
+                  <span>s</span>
+                  <span>s</span>
+                </span>
+                <span class="bottom">
+                  <span>F</span>
+                  <span>r</span>
+                  <span>o</span>
+                  <span>m</span>
+                  <span>&nbsp;</span>
+                  <span>g</span>
+                  <span>r</span>
+                  <span>a</span>
+                  <span>p</span>
+                  <span>e</span>
+                  <span>&nbsp;</span>
+                  <span>t</span>
+                  <span>o</span>
+                  <span>&nbsp;</span>
+                  <span>g</span>
+                  <span>l</span>
+                  <span>a</span>
+                  <span>s</span>
+                  <span>s</span>
+                </span>
+              </div>
+              <svg fill="none" height="130" viewBox="0 0 130 130" width="130" xmlns="http://www.w3.org/2000/svg"
+                class="stamp-illu">
+                <g fill="#ff4713">
+                  <path
+                    d="m34.4252 67.7341c-2.1921-1.2924-4.4991-1.2416-6.6918.0035-2.185 1.2406-3.2526 3.2325-3.3828 5.7504-.0743 1.4367.4682 2.7006 1.0378 3.9617l1.1738 1.3644c.1347.0781.2784.1437.4027.2361 3.0354 2.2528 6.7965 1.6418 8.9311-.5857 3.1664-3.3039 2.4679-8.4083-1.4708-10.7304z">
+                  </path>
+                  <path
+                    d="m51.3917 72.1936c2.8103-2.4512 3.1216-6.86.6822-9.6587-2.4301-2.788-6.7549-3.0848-9.5385-.6548-2.8074 2.4512-3.1176 6.8515-.6806 9.6568 2.4231 2.7893 6.7504 3.0872 9.5369.6567z">
+                  </path>
+                  <path
+                    d="m44.9508 54.2404c2.4235 2.8601 6.7337 3.191 9.5621.7348 2.8047-2.4358 3.1283-6.7548.7189-9.5859-2.4381-2.8651-6.7363-3.1953-9.5602-.7346-2.8064 2.4453-3.1296 6.7438-.7208 9.5857z">
+                  </path>
+                  <path
+                    d="m29.7462 51.3017c-2.7791 2.5376-3.0339 6.9334-.5606 9.6683 2.5482 2.8176 6.8476 3.0333 9.6439.4837 2.7496-2.5072 2.8943-6.8834.3215-9.724-2.3747-2.6222-6.7817-2.8228-9.4048-.428z">
+                  </path>
+                  <path
+                    d="m52.1235 89.684c-2.8073 2.4097-3.1313 6.8336-.7075 9.6597 2.4002 2.7993 6.751 3.1173 9.5363.6993 2.7934-2.4255 3.1343-6.7912.7498-9.5998-2.4188-2.8489-6.7449-3.1918-9.5786-.7592z">
+                  </path>
+                  <path
+                    d="m57.5533 64.7385c.1703-1.2988.424-2.6141.7795-3.9416.2359-.8841.5074-1.7448.8054-2.5566.1147-.3146.2131-.5621.2837-.7353l.0883-.2104 1.2406-3.36c-.8512.2677-1.6594.7066-2.3667 1.3243-2.7439 2.3956-3.1 6.6482-.8308 9.4796z">
+                  </path>
+                  <path
+                    d="m48.9234 79.7905c-2.4263-2.8101-6.7308-3.1355-9.5322-.7208-2.8079 2.42-3.1132 6.8212-.6697 9.6573 2.4408 2.8327 6.7837 3.1355 9.5777.6681 2.767-2.4435 3.0497-6.7954.6242-9.6046z">
+                  </path>
+                  <path
+                    d="m60.5039 79.4649c-1.6113-2.4203-2.6092-5.1956-2.9988-8.2626-.8102.275-1.5819.7061-2.2655 1.3041-2.7966 2.4464-3.1067 6.7652-.6885 9.5864 2.3313 2.7198 6.3417 3.1265 9.152 1.0217-1.2371-1.0945-2.3083-2.3112-3.1992-3.6496z">
+                  </path>
+                  <path
+                    d="m27.2268 38.249c2.982-.8363 5.2881-.6676 6.8548.502 2.7143 2.0267 2.8597 6.5585 2.8615 6.63.0268 1.3973 1.1591 2.5138 2.5427 2.5138l.0398-.0003c1.4047-.0218 2.526-1.1869 2.5046-2.6023-.0034-.2231-.0993-4.3684-2.3558-7.8761-.1235-.1923-.208-.4073-.2388-.6341-.0021-.0162-.1923-1.616.6954-2.6063.8246-.9197 2.4373-1.0754 3.6416-1.0456l.0653.001c1.3751-.0003 2.507-1.1056 2.5417-2.4987.0354-1.4153-1.0746-2.5915-2.4789-2.627-3.3474-.086-5.9054.8578-7.6052 2.8019-.3995.4569-.72.9359-.9763 1.4188-.3257.6131-1.0297.9083-1.6981.7348-2.2478-.584-4.8431-.4686-7.759.3495-1.3535.3797-2.1451 1.7929-1.7682 3.1568.3769 1.364 1.779 2.1619 3.1329 1.7818z">
+                  </path>
+                  <path
+                    d="m104.319 61.6386c-.266-.9904-.537-1.7852-.718-2.2782-.097-.2645-.18-.4739-.24-.6205l-.108-.2635-7.1007-19.2313h-26.5117l-7.2131 19.499c-.0579.1413-.1402.3507-.2374.6163-.2651.7215-.5064 1.4878-.7173 2.2772-.3501 1.3072-.7378 3.1472-.8662 5.2198-.0431.6956-.0572 1.4171-.0306 2.1537.0235.6568.0862 1.2935.1706 1.9191.3389 2.5118 1.1584 4.7727 2.463 6.7327.709 1.065 1.5691 2.0371 2.559 2.9252 1.8468 1.6569 4.1671 3.0064 6.9541 4.0191l5.9655 2.4811c.1222.084.2763.1955.4601.3529.4696.4017.8628.8607 1.1689 1.3665.6763 1.1147 1.2257 2.9913-.0022 5.5968-.5408 1.1497-1.5556 2.1145-3.0156 2.868-1.1673.6025-2.6215 1.0722-4.3228 1.3963-1.2092.2296-2.5136.3816-3.878.4495-.5143.0255-.934.034-1.2225.0362l-.46-.0032-.0526.0595.0031.0032c-.0244.0308-.0552.0754-.0882.1276-.0989.1572-.1657.3145-.196.459-.043.2034-.0149.3844.0839.5384.1227.193.357.341.6966.443.2353.072.7454.117.9133.132.4442.041.9946.075 1.6082.103 1.2693.06 2.8505.103 4.454.133 3.2319.062 6.6009.073 7.8197.076h.4766c1.2188-.003 4.5873-.014 7.8187-.076 1.6035-.03 3.1842-.073 4.4524-.133.6142-.028 1.1657-.062 1.612-.103.4468-.04.7539-.085.9096-.132.3407-.102.575-.25.6982-.444.0978-.153.1259-.333.0829-.5374-.0308-.1456-.0978-.3029-.1945-.4559-.0377-.0616-.0722-.1084-.0983-.1424l.0016-.0021-.0903-.0478-.4001.0021c-.3013-.0021-.7215-.0107-1.2358-.0362-1.3639-.068-2.6683-.22-3.8775-.4495-1.7018-.3241-3.1565-.7937-4.3233-1.3963-1.4595-.7534-2.4743-1.7182-3.0151-2.868-.9702-2.0615-.9708-3.9966-.0006-5.5968.3831-.6333.8469-1.0934 1.1684-1.3676.1158-.0988.2205-.1807.307-.2444l.1344-.1349 5.9219-2.4291c4.3414-1.5802 7.5417-3.9168 9.5747-6.9687 1.63-2.4482 2.516-5.3588 2.634-8.6518.105-2.9317-.429-5.6277-.896-7.3726z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <span class="line-top" data-motion="lineOpp"></span>
+            <p class="bottom-txt small-tit">We master the entirety of the cognac<br>production chain.</p>
+            <a href="" class="link">
+              <p class="small-tit">Our business</p>
+              <i class="ico-arrow">
+                <svg fill="none" height="36" viewBox="0 0 36 36" width="36" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m18.1777 10.3572c.0475-.0484.1068-.1152.1778-.2002.0711-.0848.1186-.1513.1421-.19997l9.8429 7.86077-9.8071 8.2243c-.0475-.0486-.1127-.1214-.1955-.2184-.083-.0969-.1362-.1699-.1602-.2181l5.4725-7.497-15.99053 2.0382v-4.5857l15.99053 2.0382z"
+                    fill="#ff4713"></path>
+                </svg>
+              </i>
+            </a>
+          </div>
+          <div class="box-how">
+            <h2 class="huge-tit" data-motion="text">
+              KNOW-HOW
+            </h2>
+            <figure class="image" data-motion="scale">
+              <img src="./assets/img/business-how.png" alt>
+            </figure>
+            <span class="line-top" data-motion="lineOpp"></span>
+            <p class="small-tit">Each generation has strived to preserve exceptional know-how.</p>
+          </div>
+        </div>
+      </section>
+      <section class="sc-story" data-theme="white">
+        <div class="inner">
+          <p class="sub-tit">OUR STORY</p>
+          <h2>
+            <a href="">
+              <div class="tit">
+                <span class="line">
+                  <span class="word">Maison Boinaud, is the</span>
+                </span>
+                <br class="pc">
+                <span class="line">
+                  <span class="word">story of a family
+                    <span class="orange-line">
+                      <span class="line">
+                        <span class="word">adventure</span>
+                      </span> 
+                      <span class="surround">
+                        <svg width="368" height="151" viewBox="0 0 368 151" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                          style="mask-image: conic-gradient(from -24deg, black 360deg, transparent 360deg);">
+                          <path
+                            d="M140.271 2.70668C199.445 -4.6439 261.271 3.05162 314.725 24.8839C339.414 34.9689 365.62 50.7739 367.744 75.002C368.53 83.9895 367.643 92.9833 362.819 101.225C356.781 111.535 346.393 119.639 334.528 125.641C322.172 131.894 308.314 136.165 294.449 139.696C279.626 143.472 264.407 146.187 249.032 148.006C218.313 151.637 187.065 151.7 156.175 149.612C125.286 147.523 95.7807 143.992 67.3339 135.669C53.593 131.649 40.0855 126.538 28.0563 119.789C17.5833 113.912 7.85727 106.298 3.19653 96.5206C-0.717224 88.3045 -0.77948 77.6675 1.61703 69.1128C4.76828 57.8799 13.3194 48.3091 23.8624 40.7516C45.8355 24.9967 75.0759 14.8803 103.585 9.86283C110.728 8.60846 117.956 7.69905 125.223 7.08441C125.013 7.10323 125.55 13.3311 125.223 13.3562C96.7844 15.7583 69.1313 23.1027 44.6139 34.9878C33.0827 40.576 21.9951 47.1614 13.5917 55.7224C9.40567 59.9873 5.96652 64.7225 3.64783 69.8403C2.45737 72.4682 1.54703 75.1902 0.994568 77.956C0.846741 78.6961 0.481018 83.7387 0.449921 81.048C0.418793 78.5393 0.613312 81.7317 0.753357 82.5784C0.893433 83.4251 1.07236 84.2969 1.298 85.1498C6.77573 105.79 33.7986 118.046 55.865 125.735C82.2654 134.936 110.821 139.357 139.268 141.985C197.149 147.341 258.089 145.999 312.734 128.143C336.893 120.247 361.908 106.7 367.044 84.554C367.308 83.4125 367.518 82.2585 367.651 81.0982C368.211 76.3003 367.97 81.5937 367.799 82.1832C367.978 81.5686 367.62 80.0634 367.495 79.2355C367.09 76.5323 366.336 73.8543 365.285 71.264C363.239 66.1838 360.096 61.411 356.228 57.0897C348.16 48.0771 336.963 41.2533 325.152 35.7027C276.436 12.8294 217.309 3.35267 161.357 6.97152C154.3 7.42936 147.266 8.10672 140.271 8.9785C140.606 8.9346 139.82 2.76312 140.271 2.70668Z"
+                            fill="#FF4713"></path>
+                        </svg>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <i class="ico-arrow">
+                <svg fill="none" height="36" viewBox="0 0 36 36" width="36" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m18.1777 10.3572c.0475-.0484.1068-.1152.1778-.2002.0711-.0848.1186-.1513.1421-.19997l9.8429 7.86077-9.8071 8.2243c-.0475-.0486-.1127-.1214-.1955-.2184-.083-.0969-.1362-.1699-.1602-.2181l5.4725-7.497-15.99053 2.0382v-4.5857l15.99053 2.0382z"
+                    fill="#ff4713"></path>
+                </svg>
+              </i>
+            </a>
+          </h2>
+          <div class="box-1" data-motion="scale">
+            <figure class="img1">
+              <img src="./assets/img/story1.png" alt>
+            </figure>
+            <div class="history">
+              <p class="small-tit">FAMILY HOUSE, MAISON BOINAUD</p>
+              <div class="img-box">
+                <figure data-motion="scale">
+                  <img src="./assets/img/story2-1.jpg" alt>
+                </figure>
+                <figure class="img2">
+                  <img src="./assets/img/story2-2.jpg" alt>
+                </figure>
+              </div>
+            </div>
+            <p>Nestled in the land of Angeac since the <span style="color:#ff4713;">16th century</span>, Maison Boinaud
+              owns the largest family-owned wine
+              estate in the
+              Cognac region.</p>
+          </div>
+          <div class="box-2">
+            <figure class="img3" data-motion="scale">
+              <img src="./assets/img/story3.png" alt>
+            </figure>
+            <figure class="img4" data-motion="scale">
+              <img src="./assets/img/story4.png" alt>
+            </figure>
+            <p class="gotham-txt">With more than 601 hectares of vineyards, mainly in Ugni Blanc.</p>
+          </div>
+          <div class="box-3">
+            <figure class="img5" data-motion="scale">
+              <img src="./assets/img/story5.png" alt>
+            </figure>
+            <p class="gotham-txt">Maison Boinaud is the largest family estate in the region.</p>
+          </div>
+        </div>
+      </section>
+      <section class="sc-independent" data-theme="dark">
+        <div class="inner">
+          <div class="box-1">
+            <div class="deco" data-motion="lineBox">
+              <span class="line-top"></span>
+              <p class="small-tit">We are independent.</p>
+            </div>
+            <h2 class="large-tit" data-motion="text">
+              THINK, DARE, DO,
+              <br>
+              A CULTURE,
+              <br>
+              OF BOLDNESS.
+            </h2>
+          </div>
+          <div class="box-2" data-theme="orangeBox">
+            <p class="sub-tit">french spirits brands</p>
+            <div data-motion="arrow">
+              <p class="tit" data-motion="text">
+                Our artisan Cognac and<br class="pc">
+                Whisky brands are meant<br class="pc">
+                to challenge the norms and<br class="pc">
+                make a mark in their time.
+              </p>
+              <a href="">
+                <i class="ico-arrow">
+                  <svg fill="none" height="36" viewBox="0 0 36 36" width="36" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m18.1777 10.3572c.0475-.0484.1068-.1152.1778-.2002.0711-.0848.1186-.1513.1421-.19997l9.8429 7.86077-9.8071 8.2243c-.0475-.0486-.1127-.1214-.1955-.2184-.083-.0969-.1362-.1699-.1602-.2181l5.4725-7.497-15.99053 2.0382v-4.5857l15.99053 2.0382z"
+                      fill="#ff4713"></path>
+                  </svg>
+                </i>
+              </a>
+            </div>
+          </div>
+          <div class="box-3">
+            <div class="sticky">
+              <div class="innerwrap">
+                <div class="wrap">
+                  <div class="bg">
+                    <figure>
+                      <img src="./assets/img/indepen1-bg.jpg" alt>
+                    </figure>
+                  </div>
+                  <h2 class="big-tit">COGNAC</h2>
+                  <div class="left">
+                    <figure>
+                      <img src="./assets/img/indepen1-left.jpg" alt>
+                    </figure>
+                  </div>
+                  <div class="right">
+                    <figure>
+                      <img src="./assets/img/indepen1-right.jpg" alt>
+                    </figure>
+                  </div>
+                </div>
+                <div class="wrap2">
+                  <div class="bg">
+                    <figure>
+                      <img src="./assets/img/indepen2-bg.jpg" alt>
+                    </figure>
+                  </div>
+                  <p class="big-tit">WHISKY</p>
+                  <div class="left">
+                    <figure>
+                      <img src="./assets/img/indepen2-left.jpg" alt>
+                    </figure>
+                  </div>
+                  <div class="right">
+                    <figure>
+                      <img src="./assets/img/indepen2-right.webp" alt>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sc-innove" data-theme="orange">
+        <div class="inner">
+          <div class="deco" data-motion="lineBox">
+            <span class="line-top"></span>
+            <p class="small-tit">We are innovative</p>
+          </div>
+          <h2 class="large-tit" data-motion="text">
+            WE HAVE RETAINED A
+            <br>
+            DYNAMIC
+            <br>
+            AND ENTREPRENEURIAL
+            <br>
+            SPIRIT.
+          </h2>
+          <p>We continuously reinvent our model to<br class="pc"> optimize it.</p>
+        </div>
+      </section>
+      <section class="sc-experiences" data-theme="white">
+        <div class="inner">
+          <p class="sub-tit">Our experiences</p>
+          <h2 data-motion="arrow">
+            <a href="">
+              <div class="tit" data-motion="text">
+                Escape and explore
+                <br>
+                our terroir
+              </div>
+              <div class="position">
+                <i class="ico-arrow">
+                  <svg fill="none" height="36" viewBox="0 0 36 36" width="36" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m18.1777 10.3572c.0475-.0484.1068-.1152.1778-.2002.0711-.0848.1186-.1513.1421-.19997l9.8429 7.86077-9.8071 8.2243c-.0475-.0486-.1127-.1214-.1955-.2184-.083-.0969-.1362-.1699-.1602-.2181l5.4725-7.497-15.99053 2.0382v-4.5857l15.99053 2.0382z"
+                      fill="#ff4713"></path>
+                  </svg>
+                </i>
+              </div>
+            </a>
+          </h2>
+          <div class="box">
+            <figure class="img" data-motion="scale">
+              <img src="./assets/img/exper.jpg" alt>
+            </figure>
+            <div class="position">
+              <div class="stamp ani-rotation">
+                <div class="txt">
+                  <span class="top">
+                    <span>M</span>
+                    <span>a</span>
+                    <span>i</span>
+                    <span>s</span>
+                    <span>o</span>
+                    <span>n</span>
+                    <span>&nbsp;</span>
+                    <span>B</span>
+                    <span>o</span>
+                    <span>i</span>
+                    <span>n</span>
+                    <span>a</span>
+                    <span>u</span>
+                    <span>d</span>
+                  </span>
+                  <span class="bottom">
+                    <span>M</span>
+                    <span>a</span>
+                    <span>i</span>
+                    <span>s</span>
+                    <span>o</span>
+                    <span>n</span>
+                    <span>&nbsp;</span>
+                    <span>B</span>
+                    <span>o</span>
+                    <span>i</span>
+                    <span>n</span>
+                    <span>a</span>
+                    <span>u</span>
+                    <span>d</span>
+                  </span>
+                </div>
+                <svg fill="none" height="131" viewBox="0 0 130 131" width="130" xmlns="http://www.w3.org/2000/svg"
+                  class="stamp-illu">
+                  <path
+                    d="m77.6541 47.6422c5.1288-3.1093 8.4556-8.112 8.4556-13.7503 0-9.411-9.2734-17.0669-20.6816-17.0669h-2.8555v14.4551c-10.119 1.1055-17.9508 8.2502-17.9508 16.9011 0 5.6383 3.3268 10.6548 8.4556 13.7503-9.121 3.828-15.4142 11.7603-15.4142 20.9226 0 11.9814 10.8676 22.0139 24.9233 23.2029v11.539h5.7249v-25.8284c13.9725-1.2437 24.7707-11.2628 24.7707-23.2166 0-9.1484-6.2793-17.0946-15.4141-20.9226zm-15.0815 38.3074c-1.899-.2211-4.1862-.6357-6.4595-1.3681v5.9562c2.301.608 4.5466.9535 6.4595 1.147v8.6513c-10.8536-1.1059-19.1984-8.5822-19.1984-17.4681s8.3863-16.376 19.1984-17.4815v20.5771zm0-26.6023c-6.9446-.9812-12.226-5.5969-12.226-11.1661s5.2814-10.1849 12.226-11.1661zm5.7249-36.6214c6.8754 1.0226 12.0874 5.6383 12.0874 11.1522 0 5.514-5.212 10.1296-12.0874 11.1523zm0 63.3067v-34.9631c10.7428 1.1608 19.0459 8.5542 19.0459 17.4815s-8.2615 16.3207-19.0459 17.4816z"
+                    fill="#ff4713"></path>
+                </svg>
+              </div>
+            </div>
+            <p>Come discover Grande Champagne in a unique way through various visiting experiences.</p>
+          </div>
+        </div>
+      </section>
+      <section class="sc-spirit">
+        <div class="box-img">
+          <figure class="img">
+            <img src="./assets/img/indepen1-bg.jpg" alt>
+          </figure>
+          <h2 class="huge-tit" data-motion="text">
+            SPIRIT CREATION
+          </h2>
+        </div>
+        <div class="box" data-theme="orangeBox">
+          <p class="sub-tit">Spirit creation</p>
+          <p class="tit" data-motion="text">
+            Maison Boinaud supports
+            <br class="pc">
+            you in the development of
+            <br class="pc">
+            your own spirit brand.
+          </p>
+        </div>
+      </section>
+      <section class="sc-groupe" data-theme="white">
+        <div class="inner">
+          <figure class="img1" data-motion="scale">
+            <img src="./assets/img/group1.jpg" alt>
+          </figure>
+          <p class="sub-tit">The groupe</p>
+          <h2 data-motion="arrow">
+            <a href="">
+              <div class="tit" data-motion="text">
+                Our mission: to create quality and
+                <br class="pc">
+                sociable spirits, always staying one
+                <br class="pc">
+                step ahead.
+              </div>
+              <div class="position" >
+                <i class="ico-arrow">
+                  <svg fill="none" height="36" viewBox="0 0 36 36" width="36" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m18.1777 10.3572c.0475-.0484.1068-.1152.1778-.2002.0711-.0848.1186-.1513.1421-.19997l9.8429 7.86077-9.8071 8.2243c-.0475-.0486-.1127-.1214-.1955-.2184-.083-.0969-.1362-.1699-.1602-.2181l5.4725-7.497-15.99053 2.0382v-4.5857l15.99053 2.0382z"
+                      fill="#ff4713"></path>
+                  </svg>
+                </i>
+              </div>
+            </a>
+          </h2>
+          <div class="box">
+            <figure class="img2" data-motion="scale">
+              <img src="./assets/img/group2.png" alt>
+            </figure>
+            <figure class="img3" data-motion="scale">
+              <img src="./assets/img/group3.jpg" alt>
+            </figure>
+            <div class="txt">
+              <p>
+                We take care of our lands, the<br class="pc">
+                women and men who contribute<br class="pc">
+                to our history, and prepare for<br class="pc">
+                the future.
+              </p>
+              <a href="" class="link">
+                <span class="small-tit">Join our Team</span>
+                <i class="ico-arrow">
+                  <svg fill="none" height="36" viewBox="0 0 36 36" width="36" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m18.1777 10.3572c.0475-.0484.1068-.1152.1778-.2002.0711-.0848.1186-.1513.1421-.19997l9.8429 7.86077-9.8071 8.2243c-.0475-.0486-.1127-.1214-.1955-.2184-.083-.0969-.1362-.1699-.1602-.2181l5.4725-7.497-15.99053 2.0382v-4.5857l15.99053 2.0382z"
+                      fill="#ff4713"></path>
+                  </svg>
+                </i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sc-next" data-theme="orange">
+        <a href="" class="inner">
+          <div class="deco" data-motion="lineBox">
+            <span class="line-top"></span>
+            <p class="small-tit">the next</p>
+          </div>
+          <div class="txt">
+            <h2 data-motion="text">
+              the house
+            </h2>
+            <p class="under-tit small-tit">Our goal: to create quality and sociable spirits, always<br> staying one step ahead.
+            </p>
+          </div>
+        </a>
+        <div class="position">
+          <div class="stamp ani-rotation">
+            <div class="txt">
+              <span class="top">
+                <span>M</span>
+                <span>a</span>
+                <span>i</span>
+                <span>s</span>
+                <span>o</span>
+                <span>n</span>
+                <span>&nbsp;</span>
+                <span>B</span>
+                <span>o</span>
+                <span>i</span>
+                <span>n</span>
+                <span>a</span>
+                <span>u</span>
+                <span>d</span>
+              </span>
+              <span class="bottom">
+                <span>M</span>
+                <span>a</span>
+                <span>i</span>
+                <span>s</span>
+                <span>o</span>
+                <span>n</span>
+                <span>&nbsp;</span>
+                <span>B</span>
+                <span>o</span>
+                <span>i</span>
+                <span>n</span>
+                <span>a</span>
+                <span>u</span>
+                <span>d</span>
+              </span>
+            </div>
+            <svg fill="none" height="131" viewBox="0 0 130 131" width="130" xmlns="http://www.w3.org/2000/svg"
+              class="stamp-illu">
+              <path
+                d="m77.6541 47.6422c5.1288-3.1093 8.4556-8.112 8.4556-13.7503 0-9.411-9.2734-17.0669-20.6816-17.0669h-2.8555v14.4551c-10.119 1.1055-17.9508 8.2502-17.9508 16.9011 0 5.6383 3.3268 10.6548 8.4556 13.7503-9.121 3.828-15.4142 11.7603-15.4142 20.9226 0 11.9814 10.8676 22.0139 24.9233 23.2029v11.539h5.7249v-25.8284c13.9725-1.2437 24.7707-11.2628 24.7707-23.2166 0-9.1484-6.2793-17.0946-15.4141-20.9226zm-15.0815 38.3074c-1.899-.2211-4.1862-.6357-6.4595-1.3681v5.9562c2.301.608 4.5466.9535 6.4595 1.147v8.6513c-10.8536-1.1059-19.1984-8.5822-19.1984-17.4681s8.3863-16.376 19.1984-17.4815v20.5771zm0-26.6023c-6.9446-.9812-12.226-5.5969-12.226-11.1661s5.2814-10.1849 12.226-11.1661zm5.7249-36.6214c6.8754 1.0226 12.0874 5.6383 12.0874 11.1522 0 5.514-5.212 10.1296-12.0874 11.1523zm0 63.3067v-34.9631c10.7428 1.1608 19.0459 8.5542 19.0459 17.4815s-8.2615 16.3207-19.0459 17.4816z"
+                fill="#ff4713"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="cursor">
+          <i class="ico-arrow">
+            <svg fill="none" height="36" viewBox="0 0 36 36" width="36" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m18.1777 10.3572c.0475-.0484.1068-.1152.1778-.2002.0711-.0848.1186-.1513.1421-.19997l9.8429 7.86077-9.8071 8.2243c-.0475-.0486-.1127-.1214-.1955-.2184-.083-.0969-.1362-.1699-.1602-.2181l5.4725-7.497-15.99053 2.0382v-4.5857l15.99053 2.0382z"
+                fill="#ff4713"></path>
+            </svg>
+          </i>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" data-theme="dark">
+      <div class="inner">
+        <div class="box">
+          <div class="left">
+            <a class="logo-ft" href="">
+              <svg fill="none" height="140" viewBox="0 0 390 140" width="390" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" class="footer-logo">
+                <clipPath>
+                  <path d="m0 .998535h390v139h-390z"></path>
+                </clipPath>
+                <g clip-path="url(#a)" fill="#fff">
+                  <path
+                    d="m0 27.853h.745588l12.636812 18.0111 12.4647-18.0111h.7455v38.7287h-5.7161v-18.5257c0-1.8679.1147-4.5743.1147-4.6315-.0574.1144-1.4147 2.2681-2.4853 3.7738l-4.9897 6.8804h-.5162l-4.93235-6.8804c-1.01324-1.4104-2.31324-3.5069-2.42794-3.6785 0 .0572.1147 2.7065.1147 4.5171v18.5257h-5.75441z">
+                  </path>
+                  <path
+                    d="m50.8334 27.853h.7456l12.847 38.7287h-6.2323l-1.4721-4.803h-11.375l-1.472 4.803h-5.8883zm-3.9574 29.0275h8.3162l-2.6573-8.7483c-.6309-2.0394-1.3574-5.146-1.4148-5.5844-.1147.3431-.8411 3.5069-1.472 5.5844z">
+                  </path>
+                  <path d="m77.3496 28.1963h5.9456v38.3856h-5.9456z"></path>
+                  <path
+                    d="m95.8555 63.2464 3.5176-4.174c1.5299 1.4104 3.3459 2.7636 6.1179 2.7636 3.231 0 5.314-1.925 5.314-4.7458v-.4574c0-2.2681-1.07-3.8881-3.9-6.2705l-3.747-3.1639c-3.5172-2.9923-5.6011-5.6987-5.6011-10.1015v-.4002c0-5.2985 3.9571-8.977 9.6931-8.977 3.632 0 5.773.8386 8.048 2.4206l-2.829 4.517c-1.358-.9529-2.772-1.7534-5.047-1.7534s-4.13 1.4675-4.13 3.6784v.2859c0 2.4206 1.243 3.8881 3.843 6.0418l3.843 3.2211c3.747 3.1638 5.716 6.099 5.716 10.273v.5718c0 5.7559-3.958 10.1014-11.05 10.1014-4.531 0-7.5326-1.5247-9.7885-3.8309z">
+                  </path>
+                  <path
+                    d="m128.662 47.8845v-1.0101c0-12.198 5.659-19.1356 13.937-19.1356s13.937 6.9376 13.937 19.1356v1.0101c0 12.198-5.659 19.1928-13.937 19.1928s-13.937-6.9948-13.937-19.1928zm21.756-.1715v-.6861c0-9.2057-3.059-14.0087-7.819-14.0087s-7.877 4.803-7.877 14.0087v.6861c0 9.2057 3.117 14.0086 7.877 14.0086s7.819-4.8029 7.819-14.0086z">
+                  </path>
+                  <path
+                    d="m179.821 47.8844c-1.128-1.5819-2.658-4.0024-2.772-4.2312 0 .0572.172 3.3926.172 5.4129v17.4965h-5.602v-38.7096h.746l13.42 19.25c1.128 1.6391 2.6 4.1168 2.772 4.4027 0-.1143-.172-3.3926-.172-5.5272v-17.7824h5.602v38.7286h-.746l-13.42-19.0212z">
+                  </path>
+                  <path
+                    d="m49.3619 73.7673h9.1765c6.5764 0 10.7632 3.831 10.7632 9.4344v.5146c0 3.5641-1.7015 5.9275-4.5309 7.2235 3.9 1.1245 6.7868 4.4027 6.7868 9.3772v.743c0 6.671-4.4162 11.131-12.5221 11.131h-9.6926v-38.3855zm9.1765 15.1332c3.2308 0 4.9897-1.6963 4.9897-4.8602v-.343c0-3.2211-1.8736-4.8602-5.1618-4.8602h-3.2309v10.0443h3.403zm.3441 18.1825c4.5309 0 6.7485-2.42 6.7485-6.385v-.514c0-3.9457-2.275-6.5568-6.7868-6.5568h-3.6897v13.4368h3.7471z">
+                  </path>
+                  <path
+                    d="m83.6211 93.4746v-1.0101c0-12.198 5.6588-19.1356 13.9368-19.1356 8.2781 0 13.9371 6.9376 13.9371 19.1356v1.0101c0 12.1984-5.659 19.1924-13.9371 19.1924-8.278 0-13.9368-6.994-13.9368-19.1924zm21.7559-.1715v-.6862c0-9.2056-3.059-14.0086-7.8191-14.0086-4.7603 0-7.8765 4.803-7.8765 14.0086v.6862c0 9.2059 3.1162 14.0089 7.8765 14.0089 4.7601 0 7.8191-4.803 7.8191-14.0089z">
+                  </path>
+                  <path d="m125.412 73.7673h5.946v38.3857h-5.946z"></path>
+                  <path
+                    d="m154.93 93.4745c-1.128-1.5819-2.657-4.0024-2.772-4.2312 0 .0572.172 3.3926.172 5.4129v17.4968h-5.601v-38.7289h.745l13.421 19.2499c1.128 1.6391 2.6 4.1169 2.772 4.4028 0-.1144-.172-3.3926-.172-5.5273v-17.7824h5.601v38.7289h-.745z">
+                  </path>
+                  <path
+                    d="m194.675 73.4241h.746l12.847 38.7289h-6.233l-1.472-4.803h-11.375l-1.472 4.803h-5.888zm-3.957 29.0269h8.316l-2.657-8.7478c-.631-2.0393-1.358-5.146-1.415-5.5844-.115.3431-.841 3.507-1.472 5.5844z">
+                  </path>
+                  <path
+                    d="m219.433 100.87v-27.1027h5.945v26.9877c0 4.174 1.931 6.5 5.43 6.5 3.498 0 5.429-2.307 5.429-6.5v-26.9877h5.946v27.1027c0 7.909-4.703 11.798-11.375 11.798s-11.375-3.889-11.375-11.798z">
+                  </path>
+                  <path
+                    d="m257.209 73.7671h8.106c9.903 0 16.135 7.1092 16.135 18.7354v.8958c0 11.3977-6.117 18.7357-16.135 18.7357h-8.106v-38.386zm7.762 33.2019c6.519 0 10.362-5.089 10.362-13.7232v-.5718c0-8.7482-3.346-13.7227-10.362-13.7227h-1.816v27.9977h1.816z">
+                  </path>
+                  <path
+                    d="m368.741 43.52c7.074-4.2884 11.662-11.1879 11.662-18.9641 0-12.9794-12.79-23.53832-28.523-23.53832h-3.939v19.93612c-13.956 1.5247-24.757 11.3784-24.757 23.3096 0 7.7762 4.588 14.6948 11.662 18.9641-12.58 5.2794-21.259 16.2195-21.259 28.8559 0 16.5247 14.988 30.3617 34.373 32.0007v15.915h7.896v-35.622c19.271-1.716 34.163-15.5338 34.163-32.0202 0-12.6173-8.66-23.5764-21.259-28.8559zm-20.8 52.8326c-2.619-.305-5.773-.8768-8.909-1.8869v8.2143c3.174.839 6.271 1.315 8.909 1.582v11.931c-14.969-1.524-26.478-11.836-26.478-24.0907 0-12.2552 11.567-22.5853 26.478-24.1101v28.3794zm0-36.6893c-9.578-1.3532-16.861-7.7191-16.861-15.4s7.283-14.0468 16.861-15.4zm7.896-50.50737c9.482 1.41037 16.671 7.77627 16.671 15.38087 0 7.6047-7.189 13.9706-16.671 15.381zm0 87.31097v-48.2202c14.816 1.601 26.268 11.7978 26.268 24.1101 0 12.3124-11.395 22.5091-26.268 24.1101z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="right">
+            <ul class="menu-list">
+              <li><a class="menu-item" href="">maison boinaud</a></li>
+              <li><a class="menu-item" href="">our vision</a></li>
+              <li><a class="menu-item" href="">know-how</a></li>
+              <li><a class="menu-item" href="">our brands</a></li>
+              <li><a class="menu-item" href="">visits</a></li>
+              <li><a class="menu-item" href="">spirit creation</a></li>
+              <li><a class="menu-item" href="">join us</a></li>
+              <li><a class="menu-item" href="">contact</a></li>
+            </ul>
+            <ul class="list">
+              <li><a href="">Privacy Policy</a></li>
+              <li>
+                <ul class="lang-list">
+                  <li><a href="">en</a></li>
+                  <li><a href="">fr</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <address>Gestion des cookies
+          Maison Boinaud @ 2024</address>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+// 반응형
+// @mixin respond($breakpoint) {
+//   @if $breakpoint == small {
+//     @media (max-width: 425px) {
+//       @content;
+//     }
+//   }
+//   @if $breakpoint == medium {
+//     @media (max-width: 1024px) {
+//       @content;
+//     }
+//   }
+//   @if $breakpoint == large {
+//     @media (min-width: 1025px) {
+//       @content;
+//     }
+//   }
+// }
+
+$orange: #ff4713;
+$black: #1d1d1b;
+$white: #fff;
+
+$mobile: 430px;
+$tabletPc: 431px;
+$ipad: 768px;
+$ipadAir: 820px;
+$ipadPro: 1024px;
+$pc:1025;
+
+
+// 반응형
+@mixin mobile(){
+  @media (max-width:$mobile){
+    @content;
+  }
+}
+
+@mixin tabletMb(){
+  @media (max-width:$ipadPro){
+    @content;
+  }
+}
+
+@mixin tabletPc(){
+  @media (min-width:$tabletPc){
+    @content;
+  }
+}
+
+@mixin pc(){
+  @media (min-width:$pc){
+    @content;
+  }
+}

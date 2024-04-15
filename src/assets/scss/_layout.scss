@@ -1,0 +1,544 @@
+.header {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  pointer-events: none;
+  .logo {
+    position: absolute;
+    pointer-events: auto;
+    top: -1.98vw;
+    left: 10%;
+    @include mobile {
+      top: -16px;
+      left: 16px;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      .stamp {
+        min-width: 8.75vw;
+        min-height: 8.75vw;
+        max-width: 8.75vw;
+        max-height: 8.75vw;
+        @include mobile {
+          min-width: 26.57vw;
+          min-height: 26.57vw;
+          max-width: 26.57vw;
+          max-height: 26.57vw;
+        }
+        .txt {
+          .top,
+          .bottom {
+            span {
+              transform-origin: center 4.69687em;
+              @include mobile {
+                transform-origin: center 4.23077em;
+              }
+            }
+          }
+          .top {
+            span {
+              &:nth-of-type(1) {
+                transform: translate(-0.317285em, 0px) rotate(67.4991deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.317909em, 0px) rotate(67.4962deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(2) {
+                transform: translate(-0.232031em, 0px) rotate(54.3932deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.231971em, 0px) rotate(54.3969deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(3) {
+                transform: translate(-0.127002em, 0px) rotate(45.519deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.127404em, 0px) rotate(45.5281deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(4) {
+                transform: translate(-0.228955em, 0px) rotate(36.7133deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.229567em, 0px) rotate(36.7126deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(5) {
+                transform: translate(-0.246093em, 0px) rotate(25.259deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.246394em, 0px) rotate(25.2548deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(6) {
+                transform: translate(-0.254443em, 0px) rotate(13.2379deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.254808em, 0px) rotate(13.2365deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(7) {
+                transform: translate(-0.100195em, 0px) rotate(4.46151deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.100361em, 0px) rotate(4.4611deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(8) {
+                transform: translate(-0.240381em, 0px) rotate(-4.00218deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.240986em, 0px) rotate(-4.00735deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(9) {
+                transform: translate(-0.246093em, 0px) rotate(-15.7105deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.246394em, 0px) rotate(-15.7187deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(10) {
+                transform: translate(-0.127002em, 0px) rotate(-24.8974deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.127404em, 0px) rotate(-24.9078deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(11) {
+                transform: translate(-0.254443em, 0px) rotate(-34.27deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.254808em, 0px) rotate(-34.2838deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(12) {
+                transform: translate(-0.228955em, 0px) rotate(-45.9099deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.229567em, 0px) rotate(-45.9284deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(13) {
+                transform: translate(-0.243896em, 0px) rotate(-57.3153deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.24399em, 0px) rotate(-57.3328deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(14) {
+                transform: translate(-0.245654em, 0px) rotate(-69.0921deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.245793em, 0px) rotate(-69.0976deg)
+                    translateY(19.662vw);
+                }
+              }
+            }
+          }
+          .bottom {
+            span {
+              &:nth-of-type(1) {
+                transform: translate(-0.317285em, 0px) rotate(247.499deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.317909em, 0px) rotate(247.496deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(2) {
+                transform: translate(-0.232031em, 0px) rotate(234.393deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.231971em, 0px) rotate(234.397deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(3) {
+                transform: translate(-0.127002em, 0px) rotate(225.519deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.127404em, 0px) rotate(225.528deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(4) {
+                transform: translate(-0.228955em, 0px) rotate(216.713deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.229567em, 0px) rotate(216.713deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(5) {
+                transform: translate(-0.246093em, 0px) rotate(205.259deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.246394em, 0px) rotate(205.255deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(6) {
+                transform: translate(-0.254443em, 0px) rotate(193.238deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.254808em, 0px) rotate(193.236deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(7) {
+                transform: translate(-0.100195em, 0px) rotate(184.462deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.100361em, 0px) rotate(184.461deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(8) {
+                transform: translate(-0.240381em, 0px) rotate(175.998deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.240986em, 0px) rotate(175.993deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(9) {
+                transform: translate(-0.246093em, 0px) rotate(164.289deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.246394em, 0px) rotate(164.281deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(10) {
+                transform: translate(-0.127002em, 0px) rotate(155.103deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.127404em, 0px) rotate(155.092deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(11) {
+                transform: translate(-0.254443em, 0px) rotate(145.73deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.254808em, 0px) rotate(145.716deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(12) {
+                transform: translate(-0.228955em, 0px) rotate(134.09deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.229567em, 0px) rotate(134.072deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(13) {
+                transform: translate(-0.243896em, 0px) rotate(122.685deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.24399em, 0px) rotate(122.667deg)
+                    translateY(19.662vw);
+                }
+              }
+              &:nth-of-type(14) {
+                transform: translate(-0.245654em, 0px) rotate(110.908deg)
+                  translateY(6.7133vw);
+                @include mobile {
+                  transform: translate(-0.245793em, 0px) rotate(110.902deg)
+                    translateY(19.662vw);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .gnb {
+    position: absolute;
+    bottom: 20px;
+    transition: bottom 0.5s;
+    pointer-events: auto;
+    @include tabletPc {
+      left: 50%;
+      transform: translateX(-50%);
+      transition: .5s;
+      &.on {
+        bottom: -6.25vw;
+        transition: bottom 0.5s;
+      }
+    }
+    @include mobile {
+      left: 16px;
+      z-index: 2;
+      clip-path: inset(100% 0 0);
+    }
+    .inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: max-content;
+      height: 3.13vw;
+      padding: 0 2.8vw;
+      background-color: $black;
+      border-radius: 3.13vw;
+      font-family: "Rift Soft", sans-serif;
+      font-size: 0.82vw;
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: $white;
+      text-transform: uppercase;
+      @include mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: calc(100vw - 32px);
+        height: 90vh;
+        font-size: 4vw;
+        overflow: hidden;
+      }
+    }
+    .menu-list {
+      display: flex;
+      align-items: center;
+      gap: 1.876vw;
+      @include mobile {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 35px;
+        margin: 100px 0 35px;
+        li ~ li {
+          position: relative;
+          &::before {
+            position: absolute;
+            top: -17.5px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            background-color: $orange;
+            content: "";
+          }
+        }
+      }
+      li:hover {
+        color: $orange;
+        transition: 0.3s;
+      }
+    }
+    .deco-dot {
+      background-color: $orange;
+      @include mobile {
+        display: none;
+      }
+      &:nth-last-of-type(1) {
+        margin-left: 1.876vw;
+      }
+      &:nth-last-of-type(2) {
+        background-color: $white;
+        margin: 0 1.876vw;
+      }
+      &:nth-last-of-type(3) {
+        margin-right: 1.876vw;
+      }
+    }
+    .lang-list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .bg-mb {
+      @include tabletPc {
+        display: none;
+      }
+      @include mobile {
+        position: absolute;
+        left: 0;
+        top: 150px;
+        width: 150%;
+        height: 100%;
+        opacity: 0.3;
+        pointer-events: none;
+        svg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .btn-close {
+      @include tabletPc {
+        display: none;
+      }
+      @include mobile {
+        bottom: 20px;
+        margin: 0 auto;
+        z-index: 2;
+        border-radius: 30px;
+        padding: 10px 40px;
+      }
+    }
+    &.active {
+      clip-path: inset(0% 0 0);
+      transition: 1s;
+      .btn-close {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.btn-mb {
+  display: none;
+  @include mobile {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    width: calc(100vw - 32px);
+    height: 5rem;
+    background: rgb(var(--black));
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 1px;
+    font-size: 1.6rem;
+    font-family: Rift Soft;
+    line-height: 5rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    background-color: $black;
+    color: $white;
+    border-radius: 60px;
+    transition: .5s;
+    .deco-dot {
+      background-color: $orange;
+    }
+    &.on {
+      opacity: 0;
+    }
+    &.active {
+      bottom: -100px;
+    }
+  }
+}
+
+.footer {
+  padding: 5.833vw 0 1.575vw;
+  font-family: "Rift Soft", sans-serif;
+  font-size: 0.76vw;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  @include mobile {
+    padding: 24.155vw 9.662vw 6.522vw;
+    font-size: 2.7vw;
+  }
+  .inner {
+    max-width: 100%;
+    width: 80.66vw;
+    margin: 0 auto;
+    @include mobile {
+      width: 100%;
+      padding: 0 16px;
+    }
+    .box {
+      @include tabletPc {
+        display: flex;
+        gap: 7vw;
+      }
+      .left {
+        width: 22.75vw;
+        @include mobile {
+          width: 100%;
+        }
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .right {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.6vw;
+        .menu-list {
+          flex-grow: 1;
+          columns: 3;
+          @include mobile {
+            width: 100%;
+            padding: 7.2464vw 0;
+            columns: 2;
+          }
+          a {
+            display: inline-block;
+            padding: 0.6253vw 0;
+            @include mobile {
+              padding: 2.42vw 0;
+            }
+          }
+          li:hover {
+            color: $orange;
+          }
+        }
+        .list {
+          display: flex;
+          flex-direction: column;
+          padding: 0.6vw 0;
+          @include mobile {
+            width: 100%;
+          }
+          li > a {
+            display: inline-block;
+            padding: 0.6253vw 0;
+            @include mobile {
+              padding: 2.42vw 0;
+            }
+          }
+          & > li:hover:nth-child(1) {
+            color: $orange;
+          }
+          .lang-list {
+            display: flex;
+            gap: 0.6253vw;
+          }
+        }
+      }
+    }
+    address {
+      font-size: 0.6253vw;
+      text-align: right;
+      @include mobile {
+        font-size: 2.7vw;
+      }
+    }
+  }
+}
