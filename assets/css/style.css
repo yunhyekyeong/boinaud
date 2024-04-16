@@ -1525,11 +1525,9 @@ body {
   border: 2px solid #ff4713;
   transition: 0.3s;
 }
-@media (min-width: 1025) {
-  .sc-masters .video-posi .btn-open:hover {
-    width: 6.416vw;
-    height: 6.416vw;
-  }
+.sc-masters .video-posi .btn-open:hover {
+  width: 6.416vw;
+  height: 6.416vw;
 }
 .sc-masters .video-posi .btn-open::after, .sc-masters .video-posi .btn-open::before {
   position: absolute;
@@ -1555,6 +1553,10 @@ body {
     font-size: 14px;
     letter-spacing: 0.1em;
   }
+  .sc-masters .video-posi .btn-open:hover {
+    width: 60px;
+    height: 60px;
+  }
   .sc-masters .video-posi .btn-open::after, .sc-masters .video-posi .btn-open::before {
     width: 1px;
     height: 1px;
@@ -1566,11 +1568,6 @@ body {
   height: 2.4vw;
   border-radius: 2vw;
   transition: 0.5s;
-}
-@media (min-width: 1025) {
-  .sc-masters .video-posi .btn-close:hover {
-    padding: 0 2.6vw;
-  }
 }
 .sc-masters.on h2 {
   opacity: 0;
@@ -1595,6 +1592,9 @@ body {
 .sc-masters.on .video-posi .btn-close {
   transform: scale(1);
   opacity: 1;
+}
+.sc-masters.on .video-posi .btn-close:hover {
+  padding: 0 2.6vw;
 }
 .sc-masters .bottom {
   position: absolute;
